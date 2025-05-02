@@ -33,7 +33,7 @@ export default function Hero() {
                 <form className="flex border border-white/15 rounded-full p-2 mt-8 max-w-lg mx-auto">
                     <input type="email"
                         placeholder="Enter you email"
-                        className="bg-transparent outline-none border-none focus:ring-0 px-4 md:flex-1"
+                        className="bg-transparent w-full outline-none border-none focus:ring-0 px-4 md:flex-1"
                     />
                     <Button
                         variant="primary"
