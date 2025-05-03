@@ -6,6 +6,7 @@ import slackLogo from "@/assets/images/slack-logo.svg";
 import relumeLogo from "@/assets/images/relume-logo.svg";
 import framerLogo from "@/assets/images/framer-logo.svg";
 import githubLogo from "@/assets/images/github-logo.svg";
+import IntegrationsColumn from "@/components/IntegrationsColumn";
 
 const integrations = [
     { name: "Figma", icon: figmaIcon, description: "Figma is a collaborative interface design tool." },
@@ -16,29 +17,26 @@ const integrations = [
     { name: "GitHub", icon: githubLogo, description: "GitHub is the leading platform for code collaboration." },
 ];
 
+export type integrationType = typeof integrations;
+
 export default function Integrations() {
     return (
-        <section>
-            <div className="py-24 overflow-hidden">
-                <div>
-                    <Tag>Integrations</Tag>
-                </div>
-                <h2 className="text-6xl font-medium mt-6">
-                    Plays well with <span className="text-lime-400">others</span>
-                </h2>
-                <p className="text-white/50 mt-4 text-lg">Layers seamlessly connects with yours favorite tools, makingit easy to plug into any workflow and collaborate across platforms. </p>
-                <div>
-                    {integrations.map(integration => (
-                        <div key={integration.name}>
-                            <div>
-                                <Image
-                                    src={integration.icon}
-                                    alt={`${integration.name} icon`} />
-                            </div>
-                            <h3>{integration.name}</h3>
-                            <p>{integration.description}</p>
+        <section className="py-24 overflow-hidden">
+            <div className="container">
+                <div className="grid lg:grid-cols-2 items-center lg:gap-16 ">
+                    <div>
+                        <Tag>Integrations</Tag>
+                        <h2 className="text-6xl font-medium mt-6">
+                            Plays well with <span className="text-lime-400">others</span>
+                        </h2>
+                        <p className="text-white/50 mt-4 text-lg">Layers seamlessly connects with yours favorite tools, makingit easy to plug into any workflow and collaborate across platforms. </p>
+                    </div>
+                    <div>
+                        <div className="h-[400px] lg:h-[800px] mt-8 lg:mt-0 overflow-hidden grid md:grid-cols-2 gap-4 [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_90%,transparent)]">
+                            <IntegrationsColumn integrations={integrations} />
+                            <IntegrationsColumn integrations={integrations.slice().reverse()} className="hidden md:flex" />
                         </div>
-                    ))}
+                    </div>
                 </div>
             </div>
         </section>
