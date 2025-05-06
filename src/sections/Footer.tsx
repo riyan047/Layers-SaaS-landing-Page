@@ -24,9 +24,9 @@ export default function Footer() {
                         ))}
                     </nav>
                     <div className="flex gap-6">
-                        <a href="https://www.linkedin.com/in/riyan-g" ><Image src={linkedInLogo} alt="LinkedIn" className="size-5 " /></a>
-                        <a href="https://x.com/Riyan50889755"><Image src={xLogo} alt="X" className="size-5 " /></a>
-                        <a href="https://github.com/riyan047"><Image src={githubLogo} alt="Github" className="size-5 " /></a>
+                        <a href="https://www.linkedin.com/in/riyan-g" target="_blank"><Image src={linkedInLogo} alt="LinkedIn" className="size-5 " /></a>
+                        <a href="https://x.com/Riyan50889755" target="_blank"><Image src={xLogo} alt="X" className="size-5 " /></a>
+                        <a href="https://github.com/riyan047" target="_blank"><Image src={githubLogo} alt="Github" className="size-5 " /></a>
                     </div>
                 </div>
             </div>
