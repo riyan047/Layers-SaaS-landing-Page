@@ -20,7 +20,7 @@ export default function Footer() {
                 <div className="flex justify-between gap-12 flex-col md:flex-row items-center">
                     <nav className="flex gap-6">
                         {footerLinks.map(footerLink => (
-                            <a href={footerLink.href} className=" text-white/50 text-sm">{footerLink.label}</a>
+                            <a key={footerLink.label} href={footerLink.href} className=" text-white/50 text-sm">{footerLink.label}</a>
                         ))}
                     </nav>
                     <div className="flex gap-6">

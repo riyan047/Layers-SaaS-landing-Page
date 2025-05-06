@@ -7,7 +7,7 @@ import outsideLogo from "@/assets/images/outside.svg";
 import apexLogo from "@/assets/images/apex.svg";
 import celestialLogo from "@/assets/images/celestial.svg";
 import twiceLogo from "@/assets/images/twice.svg";
-import { easeIn, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import { Fragment } from "react";
 
@@ -29,12 +29,12 @@ export default function LogoTicker() {
                 <h3 className="text-center text-white/50 text-xl ">Already chosen by these market Leaders</h3>
                 <div className=" flex overflow-hidden mt-12 [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
                     <motion.div
-                        
+
                         animate={{ x: "-50%" }}
                         transition={{
                             duration: 30,
                             repeat: Infinity,
-                            ease:"linear"
+                            ease: "linear"
                         }}
                         className="flex flex-none gap-24 pr-24">
                         {Array.from({ length: 2 }).map((_, i) => (

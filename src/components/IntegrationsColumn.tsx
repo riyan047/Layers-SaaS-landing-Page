@@ -6,7 +6,7 @@ import { motion } from "framer-motion"
 import { Fragment } from "react";
 
 
-export default function (props: {
+export default function IntegrationsColumn (props: {
     integrations: integrationType;
     className?: string;
     reverse?: boolean;
